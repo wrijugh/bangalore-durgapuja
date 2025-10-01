@@ -1,0 +1,7 @@
+docker login -u bookacr bookacr.azurecr.io
+
+docker tag 9b3eaefeebcd bookacr.azurecr.io/durgapuja:v2
+
+https://durgapuja.calmriver-b3439d77.eastus.azurecontainerapps.io/
+
+pip install streamlit pandas
