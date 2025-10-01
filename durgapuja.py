@@ -10,6 +10,7 @@ st.title("Bangalore Durga Puja")
 st.set_page_config(
     page_title="Bangalore Durga Puja"
 )
+
 # st.("Bangalore Durga Puja")
 FILE_PATH = 'DurgaPuja2025v1.csv'
 df = pd.read_csv(FILE_PATH)
@@ -60,3 +61,6 @@ else:
     df_html_links['GPS Location'] = df_html_links['GPS Location'].apply(make_clickable)
     html_full = df_html_links.to_html(escape=False, index=False)
     st.markdown(html_full, unsafe_allow_html=True)
+
+
+st.write("https://github.com/wrijugh/bangalore-durgapuja")
