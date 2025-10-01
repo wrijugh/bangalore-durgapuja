@@ -8,7 +8,8 @@ def make_clickable(val):
 # Set the page title
 st.title("Bangalore Durga Puja")
 st.set_page_config(
-    page_title="Bangalore Durga Puja"
+    page_title="Bangalore Durga Puja",
+    layout="wide"
 )
 
 # st.("Bangalore Durga Puja")
@@ -42,7 +43,7 @@ if search_term:
 
     
     # Apply the function to the 'GPS Location' column
-    df_html_links = df.copy()
+    df_html_links = filtered_df.copy()
     df_html_links['GPS Location'] = df_html_links['GPS Location'].apply(make_clickable)
 
     # Convert the entire DataFrame to HTML, but disable the header escaping
@@ -56,7 +57,7 @@ else:
     # Display the full DataFrame if no search term is entered
     st.subheader("Durga Puja Full List")
     # st.dataframe(df, use_container_width=True)
-    # Apply the function to the 'GPS Location' column
+    # # Apply the function to the 'GPS Location' column
     df_html_links = df.copy()
     df_html_links['GPS Location'] = df_html_links['GPS Location'].apply(make_clickable)
     html_full = df_html_links.to_html(escape=False, index=False)

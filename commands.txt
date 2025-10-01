@@ -1,6 +1,8 @@
 docker login -u bookacr bookacr.azurecr.io
 
-docker tag 9b3eaefeebcd bookacr.azurecr.io/durgapuja:v2
+docker build .
+
+docker tag 6fed4de1052c bookacr.azurecr.io/durgapuja:v3
 
 https://durgapuja.calmriver-b3439d77.eastus.azurecontainerapps.io/
 
